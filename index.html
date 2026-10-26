@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KreArt Lab - Creative Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">✳ KreArt Lab.</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#color-lab">Color Lab</a>
+      <a href="#quiz">DKV Quiz</a>
+      <a href="#poster">Poster Studio</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <span class="label">CREATIVE PLAYGROUND</span>
+      <h1>Ideas into <span>art.</span></h1>
+      <p>
+        Eksplorasi warna, tipografi, dan ide visualmu.
+        Belajar desain grafis jadi lebih seru bersama KreArt Lab.
+      </p>
+      <a href="#fitur" class="btn">Mulai Bereksperimen ↗</a>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-card">
+        <small>KREART LAB / 01</small>
+        <h2>MAKE IT<br><span>BOLD.</span></h2>
+        <p>Your idea deserves to be seen.</p>
+        <div class="color-bars">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITUR -->
+  <section class="section" id="fitur">
+    <div class="section-heading">
+      <span class="label">EXPLORE & CREATE</span>
+      <h2>Satu ruang, banyak cara berkarya.</h2>
+      <p>Temukan aktivitas kreatif untuk mengembangkan kemampuan desainmu.</p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="card">
+        <div class="icon">🎨</div>
+        <h3>Color Playground</h3>
+        <p>Buat kombinasi warna untuk desainmu.</p>
+        <a href="#color-lab">Coba sekarang →</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">🧠</div>
+        <h3>DKV Quiz</h3>
+        <p>Uji pengetahuanmu tentang desain grafis.</p>
+        <a href="#quiz">Mulai kuis →</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">🖼️</div>
+        <h3>Poster Studio</h3>
+        <p>Buat poster sederhana sesuai kreativitasmu.</p>
+        <a href="#poster">Buat poster →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- COLOR PLAYGROUND -->
+  <section class="section color-section" id="color-lab">
+    <div class="section-heading">
+      <span class="label">01 / COLOR PLAYGROUND</span>
+      <h2>Explore your colors.</h2>
+      <p>Temukan kombinasi warna yang cocok untuk proyek desainmu.</p>
+    </div>
+
+    <div class="palette" id="palette">
+      <div class="swatch" style="background:#6C4CF1">#6C4CF1</div>
+      <div class="swatch" style="background:#FF875B">#FF875B</div>
+      <div class="swatch" style="background:#FFD166">#FFD166</div>
+      <div class="swatch" style="background:#F7F3EA;color:#24212D">#F7F3EA</div>
+      <div class="swatch" style="background:#24212D">#24212D</div>
+    </div>
+
+    <button class="btn" id="generateColor" type="button">
+      ↻ Buat Palet Baru
+    </button>
+  </section>
+
+  <!-- DKV QUIZ -->
+  <section class="section" id="quiz">
+    <div class="section-heading">
+      <span class="label">02 / DKV QUIZ</span>
+      <h2>Seberapa kenal kamu dengan desain?</h2>
+      <p>Jawab pertanyaan berikut dan lihat skormu.</p>
+    </div>
+
+    <div class="quiz-box">
+      <h3 id="question">Apa tujuan utama hierarki visual?</h3>
+      <div id="answers" class="answers"></div>
+      <p id="quizFeedback" aria-live="polite"></p>
+      <p id="score">Skor: 0</p>
+      <button class="btn" id="nextQuestion" type="button" disabled>
+        Pertanyaan Berikutnya →
+      </button>
+    </div>
+  </section>
+
+  <!-- POSTER STUDIO -->
+  <section class="section" id="poster">
+    <div class="section-heading">
+      <span class="label">03 / POSTER STUDIO</span>
+      <h2>Buat poster versimu.</h2>
+      <p>Ubah judul dan warna untuk melihat hasilnya secara langsung.</p>
+    </div>
+
+    <div class="poster-layout">
+      <div class="poster-form">
+        <label for="posterTitleInput">Judul poster</label>
+        <input
+          id="posterTitleInput"
+          type="text"
+          value="MAKE IT BOLD"
+          maxlength="50"
+        >
+
+        <label for="posterSubtitleInput">Pesan pendukung</label>
+        <textarea id="posterSubtitleInput">Berani bereksperimen. Berani berkarya.</textarea>
+
+        <label for="posterBg">Warna latar</label>
+        <input type="color" id="posterBg" value="#6c4cf1">
+
+        <label for="posterFg">Warna teks</label>
+        <input type="color" id="posterFg" value="#ffffff">
+
+        <button class="btn" id="downloadPoster" type="button">
+          ⬇ Unduh Poster PNG
+        </button>
+      </div>
+
+      <div class="poster-preview" id="posterPreview">
+        <small>KREART LAB / DESIGN STUDY</small>
+        <h2 id="posterTitle">MAKE IT BOLD</h2>
+        <p id="posterSubtitle">Berani bereksperimen. Berani berkarya.</p>
+        <span class="poster-circle"></span>
+        <small>EXPLORE YOUR IDEAS</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#home" class="logo">✳ KreArt Lab.</a>
+    <p>Belajar · Eksplorasi · Ciptakan gayamu sendiri.</p>
+    <small>
+      © <span id="currentYear">2026</span> KreArt Lab.
+      Dibuat untuk belajar dan berkarya.
+    </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
